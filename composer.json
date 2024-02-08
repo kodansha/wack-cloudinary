@@ -1,0 +1,39 @@
+{
+  "name": "kodansha/wack-cloudinary",
+  "description": "Uploads the uploaded media files to Cloudinary",
+  "keywords": [
+    "wordpress",
+    "plugin"
+  ],
+  "type": "wordpress-plugin",
+  "authors": [
+    {
+      "name": "KODANSHA Ltd.",
+      "homepage": "https://github.com/kodansha"
+    },
+    {
+      "name": "Hirofumi Wakasugi",
+      "homepage": "https://github.com/5t111111"
+    }
+  ],
+  "homepage": "https://github.com/kodansha/wack-cloudinary",
+  "license": "GPL-3.0-or-later",
+  "require": {
+    "php": ">=8.1",
+    "cloudinary/cloudinary_php": "^2.12"
+  },
+  "require-dev": {
+    "10up/wp_mock": "^0.5.0",
+    "phpunit/phpunit": "^9.6",
+    "squizlabs/php_codesniffer": "^3.8"
+  },
+  "autoload": {
+    "psr-4": {
+      "WackCloudinary\\": "src"
+    }
+  },
+  "config": {
+    "sort-packages": true,
+    "optimize-autoloader": true
+  }
+}
