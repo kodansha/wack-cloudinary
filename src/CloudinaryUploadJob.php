@@ -31,12 +31,6 @@ final class CloudinaryUploadJob extends WP_Async_Request
      */
     protected function handle()
     {
-        logger('CloudinaryUploadJob is running... 1');
-
-        // sleep(10);
-
-        logger('CloudinaryUploadJob is running... 2');
-
         $file_path = $_POST['file_path'];
         $public_id = $_POST['public_id'];
         $folder = $_POST['folder'];
@@ -71,8 +65,6 @@ final class CloudinaryUploadJob extends WP_Async_Request
             $notification_url = null;
         }
 
-        logger('CloudinaryUploadJob is running... 3');
-
         (new UploadApi())->upload($file_path, [
             'public_id' => $public_id,
             'folder' => $folder,
@@ -85,7 +77,5 @@ final class CloudinaryUploadJob extends WP_Async_Request
             'notification_url' => $notification_url,
             'eager_notification_url' => empty($eager) ? null : $notification_url
         ]);
-
-        logger('CloudinaryUploadJob is running... 4');
     }
 }
