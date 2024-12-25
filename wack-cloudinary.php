@@ -5,7 +5,7 @@
  * Plugin URI: https://packagist.org/packages/kodansha/wack-cloudinary
  * Description: Uploads the uploaded media files to Cloudinary.
  * Version: 0.0.1
- * Author: KODANSHA Ltd.
+ * Author: KODANSHAtech LLC.
  * Author URI: https://github.com/kodansha
  * License: GPLv3 or later
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
