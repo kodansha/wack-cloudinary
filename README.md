@@ -12,7 +12,7 @@ It is created with the intention of being used with the WACK Stack, but it can a
 
 ## Installation
 
-- Requires PHP 8.1 or later
+- Requires PHP 8.2 or later
 - Requires WordPress 6.0 or later
 - Requires Composer
 
