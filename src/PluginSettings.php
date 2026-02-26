@@ -9,10 +9,10 @@ namespace WackCloudinary;
  */
 final class PluginSettings
 {
-    private string|null $root_folder;
+    private ?string $root_folder;
     private string $type;
-    private string|null $notification_url;
-    private array|null $basic_auth;
+    private ?string $notification_url;
+    private ?array $basic_auth;
 
     final private function __construct()
     {
@@ -27,7 +27,7 @@ final class PluginSettings
      *
      * @return string|null The root folder, null if not set
      */
-    public function rootFolder(): string|null
+    public function rootFolder(): ?string
     {
         return $this->root_folder;
     }
@@ -47,7 +47,7 @@ final class PluginSettings
      *
      * @return string|null The notification URL, null if not set
      */
-    public function notificationUrl(): string|null
+    public function notificationUrl(): ?string
     {
         return $this->notification_url;
     }
@@ -57,7 +57,7 @@ final class PluginSettings
      *
      * @return array|null The basic auth, null if not set or invalid
      */
-    public function basicAuth(): array|null
+    public function basicAuth(): ?array
     {
         return $this->basic_auth;
     }
@@ -75,7 +75,7 @@ final class PluginSettings
     /**
      * Get the root folder from the 'WACK_CLOUDINARY_SETTINGS' constant.
      */
-    public static function getRootFolderFromConstant(): string|null
+    public static function getRootFolderFromConstant(): ?string
     {
         if (!isset(Constants::settingsConstant()['root_folder'])) {
             return null;
@@ -107,7 +107,7 @@ final class PluginSettings
      *
      * @return string|null The notification URL, null if not set
      */
-    public static function getNotificationUrlFromConstant(): string|null
+    public static function getNotificationUrlFromConstant(): ?string
     {
         if (!isset(Constants::settingsConstant()['notification_url'])) {
             return null;
@@ -121,7 +121,7 @@ final class PluginSettings
      *
      * @return array|null The basic auth, null if not set or invalid
      */
-    public static function getBasicAuthFromConstant(): array|null
+    public static function getBasicAuthFromConstant(): ?array
     {
         if (!isset(Constants::settingsConstant()['basic_auth'])) {
             return null;

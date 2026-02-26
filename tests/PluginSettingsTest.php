@@ -43,7 +43,7 @@ final class PluginSettingsTest extends WP_Mock\Tools\TestCase
         $mock = Mockery::mock('overload:' . Constants::class)->makePartial();
         $mock->shouldReceive('settingsConstant')
         ->andReturn([
-            'type' => 'authenticated'
+            'type' => 'authenticated',
         ]);
         $result = PluginSettings::getTypeFromConstant();
         $this->assertEquals('authenticated', $result);
@@ -65,7 +65,7 @@ final class PluginSettingsTest extends WP_Mock\Tools\TestCase
         $mock = Mockery::mock('overload:' . Constants::class)->makePartial();
         $mock->shouldReceive('settingsConstant')
         ->andReturn([
-            'type' => 'invalid'
+            'type' => 'invalid',
         ]);
         $result = PluginSettings::getTypeFromConstant();
         $this->assertEquals('upload', $result);
@@ -80,7 +80,7 @@ final class PluginSettingsTest extends WP_Mock\Tools\TestCase
         $mock = Mockery::mock('overload:' . Constants::class)->makePartial();
         $mock->shouldReceive('settingsConstant')
         ->andReturn([
-            'notification_url' => 'https://example.com'
+            'notification_url' => 'https://example.com',
         ]);
         $result = PluginSettings::getNotificationUrlFromConstant();
         $this->assertEquals('https://example.com', $result);
@@ -108,7 +108,7 @@ final class PluginSettingsTest extends WP_Mock\Tools\TestCase
             'basic_auth' => [
                 'username' => 'test-user',
                 'password' => 'test-password',
-            ]
+            ],
         ]);
         $result = PluginSettings::getBasicAuthFromConstant();
         $this->assertEquals([
@@ -125,7 +125,7 @@ final class PluginSettingsTest extends WP_Mock\Tools\TestCase
         ->andReturn([
             'basic_auth' => [
                 'username' => 'test-user',
-            ]
+            ],
         ]);
         $result = PluginSettings::getBasicAuthFromConstant();
         $this->assertNull($result);
@@ -139,7 +139,7 @@ final class PluginSettingsTest extends WP_Mock\Tools\TestCase
         ->andReturn([
             'basic_auth' => [
                 'password' => 'test-password',
-            ]
+            ],
         ]);
         $result = PluginSettings::getBasicAuthFromConstant();
         $this->assertNull($result);

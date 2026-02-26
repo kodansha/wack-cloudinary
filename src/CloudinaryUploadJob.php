@@ -75,7 +75,7 @@ final class CloudinaryUploadJob extends WP_Async_Request
             'overwrite' => true,
             'invalidate' => true,
             'notification_url' => $notification_url,
-            'eager_notification_url' => empty($eager) ? null : $notification_url
+            'eager_notification_url' => empty($eager) ? null : $notification_url,
         ]);
     }
 }

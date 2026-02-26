@@ -52,7 +52,7 @@ final class HandleUploadHook
                 'folder' => $upload_directory,
                 'resource_type' => 'image',
                 'type' => PluginSettings::get()->type(),
-                'notification_url' => PluginSettings::get()->notificationUrl()
+                'notification_url' => PluginSettings::get()->notificationUrl(),
             ])->dispatch();
         }
 
